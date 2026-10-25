@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="DolarHoyRD">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8EFE9"/><stop offset="1" stop-color="#F8F6F0"/></linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect x="120" y="90" width="960" height="570" rx="22" fill="#fff" stroke="#E4E5DD" stroke-width="2"/>
+  <rect x="120" y="90" width="960" height="56" rx="22" fill="#103D30"/>
+  <rect x="120" y="124" width="960" height="22" fill="#103D30"/>
+  <circle cx="156" cy="118" r="7" fill="#F8F6F0" opacity=".8"/><circle cx="182" cy="118" r="7" fill="#F8F6F0" opacity=".5"/><circle cx="208" cy="118" r="7" fill="#F8F6F0" opacity=".3"/>
+  <text x="600" y="126" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#F8F6F0">DolarHoyRD</text>
+  <text x="170" y="204" font-family="Georgia, serif" font-size="30" fill="#17211D">Tasas de cambio</text>
+  <rect x="170" y="230" width="860" height="46" rx="10" fill="#EAF1EC"/>
+  <text x="196" y="260" font-family="Arial, sans-serif" font-size="18" fill="#103D30">Banco</text>
+  <text x="640" y="260" font-family="Arial, sans-serif" font-size="18" fill="#103D30">Compra</text>
+  <text x="840" y="260" font-family="Arial, sans-serif" font-size="18" fill="#103D30">Venta</text>
+  <g fill="#E4E5DD">
+    <rect x="196" y="310" width="220" height="16" rx="8"/><rect x="640" y="310" width="90" height="16" rx="8"/><rect x="840" y="310" width="90" height="16" rx="8"/>
+    <rect x="196" y="370" width="180" height="16" rx="8"/><rect x="640" y="370" width="90" height="16" rx="8"/><rect x="840" y="370" width="90" height="16" rx="8"/>
+    <rect x="196" y="430" width="240" height="16" rx="8"/><rect x="640" y="430" width="90" height="16" rx="8"/><rect x="840" y="430" width="90" height="16" rx="8"/>
+    <rect x="196" y="490" width="200" height="16" rx="8"/><rect x="640" y="490" width="90" height="16" rx="8"/><rect x="840" y="490" width="90" height="16" rx="8"/>
+  </g>
+  <rect x="170" y="545" width="860" height="2" fill="#E4E5DD"/>
+  <path d="M190 620 L330 585 L470 600 L610 565 L750 580 L890 555 L1010 570" fill="none" stroke="#2F7A5E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="708" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#626760">Imagen de referencia · captura pendiente</text>
+</svg>

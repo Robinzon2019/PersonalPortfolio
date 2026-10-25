@@ -1,0 +1,11 @@
+.featured {
+  padding-block: var(--space-8);
+}
+
+.featured__all {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  color: var(--color-brand);
+}

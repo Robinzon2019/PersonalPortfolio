@@ -1,0 +1,74 @@
+<section id="contacto" class="contact" aria-labelledby="contact-title">
+  @if (config(); as portfolio) {
+    <div class="container contact__inner">
+      <h2 id="contact-title" class="contact__title">{{ portfolio.contact.title }}</h2>
+      <p class="contact__text">{{ portfolio.contact.text }}</p>
+
+      @if (primaryChannel(); as primary) {
+        <a
+          appButton
+          variant="light"
+          [href]="primary.href"
+          [attr.target]="primary.external ? '_blank' : null"
+          [attr.rel]="primary.external ? 'noopener noreferrer' : null"
+        >
+          {{ portfolio.contact.cta }}
+        </a>
+
+        <ul class="contact__channels" aria-label="Canales de contacto">
+          @for (channel of channels(); track channel.id) {
+            <li>
+              <a
+                appButton
+                variant="outline-light"
+                [href]="channel.href"
+                [attr.target]="channel.external ? '_blank' : null"
+                [attr.rel]="channel.external ? 'noopener noreferrer' : null"
+              >
+                <app-icon [name]="channel.icon" />
+                {{ channel.label }}
+              </a>
+            </li>
+          }
+        </ul>
+
+        @if (emailChannel()) {
+          <form class="form" [formGroup]="form" (ngSubmit)="send()" novalidate aria-label="Formulario de contacto">
+            <div class="form__field">
+              <label for="contact-name">Nombre</label>
+              <input id="contact-name" type="text" formControlName="name" autocomplete="name" />
+              @if (form.controls.name.touched && form.controls.name.invalid) {
+                <p class="form__error" role="alert">Escribe tu nombre.</p>
+              }
+            </div>
+            <div class="form__field">
+              <label for="contact-email">Tu correo</label>
+              <input id="contact-email" type="email" formControlName="email" autocomplete="email" />
+              @if (form.controls.email.touched && form.controls.email.invalid) {
+                <p class="form__error" role="alert">Escribe un correo válido.</p>
+              }
+            </div>
+            <div class="form__field">
+              <label for="contact-message">Mensaje</label>
+              <textarea id="contact-message" rows="5" formControlName="message"></textarea>
+              @if (form.controls.message.touched && form.controls.message.invalid) {
+                <p class="form__error" role="alert">El mensaje debe tener al menos 10 caracteres.</p>
+              }
+            </div>
+            <button appButton type="submit" variant="light">Enviar mensaje</button>
+            @if (submitted()) {
+              <p class="form__note" role="status">
+                Se abrió tu aplicación de correo con el mensaje listo. Envíalo desde allí para completarlo.
+              </p>
+            }
+          </form>
+        }
+      } @else {
+        <p class="contact__pending">
+          Los datos de contacto están pendientes de configuración. Agrégalos en data/portfolio.json (correo,
+          LinkedIn, GitHub o WhatsApp).
+        </p>
+      }
+    </div>
+  }
+</section>

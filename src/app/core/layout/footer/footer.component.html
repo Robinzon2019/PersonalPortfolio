@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__copy">© {{ year }} {{ config()?.name ?? 'Robinson Montero' }}</p>
+
+    <nav aria-label="Pie de página">
+      <ul class="footer__links">
+        <li><a routerLink="/" fragment="proyectos">Proyectos</a></li>
+        <li><a routerLink="/" fragment="servicios">Servicios</a></li>
+        <li><a routerLink="/" fragment="contacto">Contacto</a></li>
+        @for (channel of channels(); track channel.id) {
+          <li>
+            <a
+              [href]="channel.href"
+              [attr.target]="channel.external ? '_blank' : null"
+              [attr.rel]="channel.external ? 'noopener noreferrer' : null"
+              >{{ channel.label }}</a
+            >
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</footer>

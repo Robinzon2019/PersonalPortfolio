@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Captura pendiente">
+  <rect width="1200" height="750" fill="#F1EFE6"/>
+  <rect x="150" y="120" width="900" height="510" rx="22" fill="#fff" stroke="#E4E5DD" stroke-width="2" stroke-dasharray="14 10"/>
+  <g stroke="#103D30" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".55">
+    <rect x="540" y="290" width="120" height="90" rx="10"/><circle cx="575" cy="320" r="9"/><path d="M545 370l36-30 30 22 24-16 25 24"/>
+  </g>
+  <text x="600" y="450" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#17211D">Captura pendiente</text>
+  <text x="600" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#626760">Reemplaza este archivo por una imagen real del proyecto</text>
+</svg>

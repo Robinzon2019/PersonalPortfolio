@@ -1,0 +1,44 @@
+@if (config(); as portfolio) {
+  @let hero = portfolio.hero;
+
+  <section id="inicio" class="hero" aria-labelledby="hero-title">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="hero__eyebrow">{{ hero.eyebrow }}</p>
+        <h1 id="hero-title" class="hero__title">
+          {{ hero.titlePrefix }}
+          <span class="hero__highlight">{{ hero.titleHighlight }}</span>
+        </h1>
+        <p class="hero__subtitle">{{ hero.subtitle }}</p>
+        <p class="hero__description">{{ hero.description }}</p>
+
+        <div class="hero__actions">
+          <a appButton variant="primary" routerLink="/" fragment="proyectos">{{ hero.primaryCta }}</a>
+          <a appButton variant="secondary" routerLink="/" fragment="contacto">{{ hero.secondaryCta }}</a>
+        </div>
+
+        @if (hero.technologies.length > 0) {
+          <div class="hero__tech">
+            <p class="hero__tech-label">Tecnologías destacadas</p>
+            <ul class="hero__tech-list">
+              @for (tech of hero.technologies; track tech) {
+                <li><app-technology-badge [label]="tech" /></li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+
+      <div class="hero__media">
+        <img
+          [src]="hero.image.src"
+          [alt]="hero.image.alt"
+          [attr.width]="hero.image.width"
+          [attr.height]="hero.image.height"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Robinson Montero",
+  "brand": {
+    "initials": "RM",
+    "tagline": "Soluciones Tecnológicas"
+  },
+  "hero": {
+    "eyebrow": "ROBINSON MONTERO",
+    "titlePrefix": "Software que",
+    "titleHighlight": "transforma tu negocio",
+    "subtitle": "Desarrollo web · Automatización · Business Intelligence",
+    "description": "Creo soluciones digitales que optimizan procesos, mejoran la toma de decisiones y generan valor para tu empresa",
+    "primaryCta": "Ver proyectos",
+    "secondaryCta": "Hablemos",
+    "image": {
+      "src": "images/hero/hero-laptop.svg",
+      "alt": "Portátil mostrando un panel de indicadores de uno de los proyectos",
+      "width": 900,
+      "height": 640
+    },
+    "technologies": [".NET", "Angular", "Python", "Power BI"]
+  },
+  "services": [
+    {
+      "id": "software",
+      "icon": "code",
+      "title": "Desarrollo de software",
+      "description": "Aplicaciones web a la medida que se adaptan a la forma en que trabaja tu negocio y pueden crecer con él."
+    },
+    {
+      "id": "automatizacion",
+      "icon": "automation",
+      "title": "Automatización de procesos",
+      "description": "Reduce tareas manuales y repetitivas para que tu equipo dedique su tiempo a lo que realmente importa."
+    },
+    {
+      "id": "analitica",
+      "icon": "chart",
+      "title": "Dashboards y analítica",
+      "description": "Paneles en Power BI que convierten tus datos en indicadores claros para decidir con más información."
+    }
+  ],
+  "contact": {
+    "title": "¿Tienes un proyecto en mente?",
+    "text": "Cuéntame qué necesitas y conversemos sobre cómo una solución digital puede ayudar a tu negocio.",
+    "cta": "Conversemos",
+    "email": "rmontero2021@hotmail.com",
+    "linkedin": "",
+    "github": "",
+    "whatsapp": "18092707064"
+  }
+}

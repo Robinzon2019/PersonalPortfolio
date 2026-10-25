@@ -1,0 +1,107 @@
+<div class="detail container">
+  <a class="detail__back" routerLink="/proyectos">
+    <app-icon name="arrow-left" />
+    Volver a proyectos
+  </a>
+
+  @if (state(); as current) {
+    @if (current.status === 'loading') {
+      <app-loading-state label="Cargando proyecto…" />
+    } @else if (current.status === 'error') {
+      <app-empty-state
+        title="No se pudo cargar el proyecto"
+        message="Revisa que el archivo data/projects.json exista y tenga un formato válido."
+      />
+    } @else if (!current.data) {
+      <app-empty-state title="Proyecto no encontrado" message="El proyecto que buscas no existe o fue movido.">
+        <a appButton variant="primary" routerLink="/proyectos">Ver todos los proyectos</a>
+      </app-empty-state>
+    } @else {
+      @let project = current.data;
+
+      <article>
+        <header class="detail__header">
+          <p class="detail__meta">{{ project.category }} · {{ statusLabel() }}</p>
+          <h1 class="detail__title">{{ project.title }}</h1>
+          <p class="detail__description">{{ project.description }}</p>
+
+          <ul class="detail__tech" aria-label="Tecnologías">
+            @for (tech of project.technologies; track tech) {
+              <li><app-technology-badge [label]="tech" /></li>
+            }
+          </ul>
+
+          @if (demoUrl() || repositoryUrl()) {
+            <div class="detail__actions">
+              @if (demoUrl(); as url) {
+                <a appButton variant="primary" [href]="url" target="_blank" rel="noopener noreferrer">
+                  Ver demo <app-icon name="external" />
+                </a>
+              }
+              @if (repositoryUrl(); as url) {
+                <a appButton variant="secondary" [href]="url" target="_blank" rel="noopener noreferrer">
+                  Ver repositorio <app-icon name="external" />
+                </a>
+              }
+            </div>
+          }
+        </header>
+
+        <img
+          class="detail__cover"
+          [src]="project.coverImage"
+          [alt]="project.coverImageAlt"
+          width="1200"
+          height="750"
+          decoding="async"
+        />
+
+        <div class="detail__grid">
+          <section aria-labelledby="role-title">
+            <h2 id="role-title">Mi rol</h2>
+            <p>{{ project.role }}</p>
+          </section>
+
+          <section aria-labelledby="problem-title">
+            <h2 id="problem-title">Problema</h2>
+            <p>{{ project.problem }}</p>
+          </section>
+
+          <section aria-labelledby="solution-title">
+            <h2 id="solution-title">Solución</h2>
+            <p>{{ project.solution }}</p>
+          </section>
+
+          @if (project.features.length > 0) {
+            <section aria-labelledby="features-title">
+              <h2 id="features-title">Funcionalidades</h2>
+              <ul class="detail__list">
+                @for (feature of project.features; track feature) {
+                  <li>{{ feature }}</li>
+                }
+              </ul>
+            </section>
+          }
+
+          @if (project.outcomes.length > 0) {
+            <section aria-labelledby="outcomes-title">
+              <h2 id="outcomes-title">Resultados</h2>
+              <ul class="detail__list">
+                @for (outcome of project.outcomes; track outcome) {
+                  <li>{{ outcome }}</li>
+                }
+              </ul>
+            </section>
+          }
+        </div>
+
+        @if (project.gallery.length > 0) {
+          <section class="detail__gallery" aria-labelledby="gallery-title">
+            <h2 id="gallery-title">Galería</h2>
+            <app-project-gallery [images]="project.gallery" />
+          </section>
+        }
+      </article>
+    }
+  }
+</div>

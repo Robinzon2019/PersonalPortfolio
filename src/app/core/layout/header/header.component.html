@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" routerLink="/" fragment="inicio" aria-label="Robinson Montero, ir al inicio" (click)="closeMenu()">
+      <span class="brand__mark" aria-hidden="true">{{ config()?.brand?.initials ?? 'RM' }}</span>
+      <span class="brand__text">
+        <span class="brand__name">{{ config()?.name ?? 'Robinson Montero' }}</span>
+        <span class="brand__tagline">{{ config()?.brand?.tagline ?? 'Soluciones digitales' }}</span>
+      </span>
+    </a>
+
+    <nav
+      id="primary-nav"
+      class="nav"
+      [class.nav--open]="menuOpen()"
+      aria-label="Principal"
+    >
+      <ul class="nav__list">
+        @for (link of links; track link.fragment) {
+          <li>
+            <a class="nav__link" routerLink="/" [fragment]="link.fragment" (click)="closeMenu()">{{ link.label }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <app-theme-toggle />
+      <button
+        type="button"
+        class="menu-button"
+        aria-controls="primary-nav"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+        (click)="toggleMenu()"
+      >
+        <app-icon [name]="menuOpen() ? 'close' : 'menu'" />
+      </button>
+    </div>
+  </div>
+</header>

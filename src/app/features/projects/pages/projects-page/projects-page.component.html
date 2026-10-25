@@ -1,0 +1,48 @@
+<section class="page container" aria-labelledby="projects-title">
+  <header class="page__header">
+    <p class="page__eyebrow">Proyectos</p>
+    <h1 id="projects-title" class="page__title">Todos los proyectos</h1>
+    <p class="page__intro">Explora los proyectos por nombre, categoría o tecnología.</p>
+  </header>
+
+  @if (state(); as current) {
+    @if (current.status === 'loading') {
+      <app-loading-state label="Cargando proyectos…" />
+    } @else if (current.status === 'error') {
+      <app-empty-state
+        title="No se pudieron cargar los proyectos"
+        message="Revisa que el archivo data/projects.json exista y tenga un formato válido."
+      />
+    } @else if (current.data.length === 0) {
+      <app-empty-state
+        title="Aún no hay proyectos"
+        message="Agrega proyectos en data/projects.json para que aparezcan aquí."
+      />
+    } @else {
+      <app-project-filters
+        [filters]="filters()"
+        [categories]="categories()"
+        [technologies]="technologies()"
+        (filtersChange)="filters.set($event)"
+        (cleared)="clearFilters()"
+      />
+
+      <p class="page__count" aria-live="polite">
+        {{ filtered().length }} {{ filtered().length === 1 ? 'proyecto' : 'proyectos' }}
+      </p>
+
+      @if (filtered().length > 0) {
+        <app-project-grid [projects]="filtered()" />
+      } @else {
+        <app-empty-state
+          title="Sin coincidencias"
+          message="Ningún proyecto coincide con la búsqueda o los filtros seleccionados."
+        >
+          @if (hasActiveFilters()) {
+            <button appButton type="button" variant="secondary" (click)="clearFilters()">Limpiar filtros</button>
+          }
+        </app-empty-state>
+      }
+    }
+  }
+</section>

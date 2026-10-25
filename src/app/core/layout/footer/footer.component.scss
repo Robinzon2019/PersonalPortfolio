@@ -1,0 +1,41 @@
+@use 'mixins' as m;
+
+.footer {
+  padding-block: var(--space-5);
+  background: var(--color-contact-bg);
+  border-top: 1px solid rgb(248 246 240 / 14%);
+  color: var(--color-on-contact-muted);
+  font-size: var(--text-sm);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+
+  @include m.up(md) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+
+  a {
+    color: var(--color-on-contact-muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-on-contact);
+      text-decoration: underline;
+    }
+  }
+}
+
+:focus-visible {
+  outline-color: var(--color-on-contact);
+}

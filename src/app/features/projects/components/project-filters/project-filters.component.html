@@ -1,0 +1,34 @@
+<form class="filters" [formGroup]="form" (submit)="$event.preventDefault()" role="search" aria-label="Filtrar proyectos">
+  <div class="filters__field filters__field--search">
+    <label for="project-search">Buscar</label>
+    <input
+      id="project-search"
+      type="search"
+      formControlName="query"
+      placeholder="Nombre o descripción"
+      autocomplete="off"
+    />
+  </div>
+
+  <div class="filters__field">
+    <label for="project-category">Categoría</label>
+    <select id="project-category" formControlName="category">
+      <option value="">Todas</option>
+      @for (category of categories(); track category) {
+        <option [value]="category">{{ category }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="filters__field">
+    <label for="project-technology">Tecnología</label>
+    <select id="project-technology" formControlName="technology">
+      <option value="">Todas</option>
+      @for (technology of technologies(); track technology) {
+        <option [value]="technology">{{ technology }}</option>
+      }
+    </select>
+  </div>
+
+  <button appButton type="button" variant="secondary" (click)="cleared.emit()">Limpiar filtros</button>
+</form>

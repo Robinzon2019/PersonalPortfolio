@@ -1,0 +1,14 @@
+<button
+  type="button"
+  class="toggle"
+  aria-label="Modo oscuro"
+  [attr.aria-pressed]="theme.isDark()"
+  (click)="theme.toggle()"
+>
+  <span class="toggle__option" [class.toggle__option--active]="!theme.isDark()">
+    <app-icon name="sun" />
+  </span>
+  <span class="toggle__option" [class.toggle__option--active]="theme.isDark()">
+    <app-icon name="moon" />
+  </span>
+</button>

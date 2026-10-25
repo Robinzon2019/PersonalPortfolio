@@ -1,0 +1,17 @@
+<section id="servicios" class="services" aria-labelledby="services-title">
+  <div class="container">
+    <app-section-heading eyebrow="Servicios" title="Soluciones para tu empresa" titleId="services-title" />
+
+    @if (config(); as portfolio) {
+      <ul class="services__grid">
+        @for (service of portfolio.services; track service.id) {
+          <li class="service">
+            <span class="service__icon"><app-icon [name]="service.icon" /></span>
+            <h3 class="service__title">{{ service.title }}</h3>
+            <p class="service__description">{{ service.description }}</p>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+</section>

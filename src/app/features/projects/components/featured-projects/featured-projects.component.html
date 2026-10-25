@@ -1,0 +1,28 @@
+<section id="proyectos" class="featured" aria-labelledby="featured-title">
+  <div class="container">
+    <app-section-heading eyebrow="Proyectos" title="Proyectos destacados" titleId="featured-title">
+      <a class="featured__all" routerLink="/proyectos">
+        Ver todos los proyectos
+        <app-icon name="arrow-right" />
+      </a>
+    </app-section-heading>
+
+    @if (state(); as current) {
+      @if (current.status === 'loading') {
+        <app-loading-state label="Cargando proyectos…" />
+      } @else if (current.status === 'error') {
+        <app-empty-state
+          title="No se pudieron cargar los proyectos"
+          message="Revisa que el archivo data/projects.json exista y tenga un formato válido."
+        />
+      } @else if (current.data.length > 0) {
+        <app-project-grid [projects]="current.data" />
+      } @else {
+        <app-empty-state
+          title="Aún no hay proyectos destacados"
+          message="Marca un proyecto con featured: true en projects.json para mostrarlo aquí."
+        />
+      }
+    }
+  </div>
+</section>

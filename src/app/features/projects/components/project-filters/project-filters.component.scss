@@ -1,0 +1,57 @@
+@use 'mixins' as m;
+
+.filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: end;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+
+  @include m.up(md) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include m.up(lg) {
+    grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)) auto;
+  }
+}
+
+.filters__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+}
+
+.filters__field--search {
+  @include m.up(md) {
+    grid-column: 1 / -1;
+  }
+
+  @include m.up(lg) {
+    grid-column: auto;
+  }
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+input::placeholder {
+  color: var(--color-text-muted);
+}

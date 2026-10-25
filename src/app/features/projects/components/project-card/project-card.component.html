@@ -1,0 +1,38 @@
+<article class="card">
+  <img
+    class="card__image"
+    [src]="project().coverImage"
+    [alt]="project().coverImageAlt"
+    width="1200"
+    height="750"
+    loading="lazy"
+    decoding="async"
+  />
+  <div class="card__body">
+    <h3 class="card__title">{{ project().title }}</h3>
+    <p class="card__description">{{ project().shortDescription }}</p>
+    <ul class="card__tech" aria-label="Tecnologías">
+      @for (tech of project().technologies; track tech) {
+        <li><app-technology-badge [label]="tech" /></li>
+      }
+    </ul>
+    <div class="card__actions">
+      <a appButton variant="primary" [routerLink]="['/proyectos', project().slug]">
+        Ver proyecto
+        <app-icon name="arrow-right" />
+      </a>
+      @if (demoUrl(); as url) {
+        <a class="card__link" [href]="url" target="_blank" rel="noopener noreferrer">
+          Demo <app-icon name="external" />
+          <span class="visually-hidden">de {{ project().title }} (se abre en una pestaña nueva)</span>
+        </a>
+      }
+      @if (repositoryUrl(); as url) {
+        <a class="card__link" [href]="url" target="_blank" rel="noopener noreferrer">
+          Repositorio <app-icon name="external" />
+          <span class="visually-hidden">de {{ project().title }} (se abre en una pestaña nueva)</span>
+        </a>
+      }
+    </div>
+  </div>
+</article>

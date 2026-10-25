@@ -1,0 +1,156 @@
+[
+  {
+    "id": "dolarhoyrd",
+    "slug": "dolarhoyrd",
+    "title": "DolarHoyRD",
+    "shortDescription": "Plataforma de consulta y comparación de tasas de cambio de bancos en República Dominicana.",
+    "description": "Plataforma de consulta y comparación de tasas de cambio de bancos en República Dominicana. Contenido editable: amplía esta descripción en projects.json.",
+    "category": "Desarrollo web",
+    "technologies": ["Next.js", "FastAPI", "PostgreSQL", "Selenium", "Docker"],
+    "coverImage": "images/projects/dolarhoyrd-cover.svg",
+    "coverImageAlt": "Imagen de referencia de DolarHoyRD con una tabla de tasas de cambio (captura pendiente)",
+    "gallery": [
+      {
+        "src": "images/projects/placeholder-screen.svg",
+        "alt": "Espacio reservado para una captura de DolarHoyRD"
+      }
+    ],
+    "featured": true,
+    "displayOrder": 1,
+    "status": "to-define",
+    "role": "Pendiente de definir: describe tu participación en este proyecto.",
+    "problem": "Consultar y comparar las tasas de cambio de distintos bancos del país implica revisar varias fuentes por separado.",
+    "solution": "Una plataforma que reúne las tasas de los bancos de República Dominicana para consultarlas y compararlas en un solo lugar.",
+    "features": [
+      "Consulta de tasas de cambio de bancos en República Dominicana",
+      "Comparación de tasas entre entidades",
+      "Pendiente de definir: agrega aquí las funcionalidades específicas"
+    ],
+    "outcomes": [],
+    "demoUrl": "https://dolarhoyrd.com/",
+    "repositoryUrl": ""
+  },
+  {
+    "id": "gestion-prestamos",
+    "slug": "gestion-de-prestamos",
+    "title": "Gestión de préstamos",
+    "shortDescription": "Sistema para administrar clientes, préstamos, cuotas y pagos.",
+    "description": "Sistema para administrar clientes, préstamos, cuotas y pagos. Contenido editable: las tecnologías y el alcance pueden ajustarse en projects.json.",
+    "category": "Desarrollo de software",
+    "technologies": ["Angular", ".NET", "SQL Server"],
+    "coverImage": "images/projects/gestion-prestamos-cover.svg",
+    "coverImageAlt": "Imagen de referencia del sistema de gestión de préstamos con tabla de cuotas (captura pendiente)",
+    "gallery": [
+      {
+        "src": "images/projects/placeholder-screen.svg",
+        "alt": "Espacio reservado para una captura del sistema de gestión de préstamos"
+      }
+    ],
+    "featured": true,
+    "displayOrder": 2,
+    "status": "to-define",
+    "role": "Pendiente de definir: describe tu participación en este proyecto.",
+    "problem": "Llevar el control de clientes, préstamos, cuotas y pagos de forma manual dificulta el seguimiento.",
+    "solution": "Un sistema que centraliza la administración de clientes, préstamos, cuotas y pagos.",
+    "features": [
+      "Administración de clientes",
+      "Registro de préstamos",
+      "Control de cuotas y pagos",
+      "Pendiente de definir: agrega aquí las funcionalidades específicas"
+    ],
+    "outcomes": [],
+    "demoUrl": "",
+    "repositoryUrl": ""
+  },
+  {
+    "id": "automatizacion-reportes",
+    "slug": "automatizacion-de-reportes",
+    "title": "Automatización de reportes",
+    "shortDescription": "Automatización del procesamiento de archivos y generación de reportes empresariales.",
+    "description": "Automatización del procesamiento de archivos y generación de reportes empresariales. Contenido editable: amplía esta descripción en projects.json.",
+    "category": "Automatización",
+    "technologies": ["C#", ".NET", "Power Automate", "SharePoint"],
+    "coverImage": "images/projects/automatizacion-reportes-cover.svg",
+    "coverImageAlt": "Imagen de referencia de un flujo de automatización de reportes (captura pendiente)",
+    "gallery": [
+      {
+        "src": "images/projects/placeholder-screen.svg",
+        "alt": "Espacio reservado para una captura de la automatización de reportes"
+      }
+    ],
+    "featured": true,
+    "displayOrder": 3,
+    "status": "to-define",
+    "role": "Pendiente de definir: describe tu participación en este proyecto.",
+    "problem": "Procesar archivos y preparar reportes de forma manual consume tiempo y es propenso a errores.",
+    "solution": "Un proceso automatizado que procesa los archivos y genera los reportes empresariales.",
+    "features": [
+      "Procesamiento automático de archivos",
+      "Generación de reportes empresariales",
+      "Pendiente de definir: agrega aquí las funcionalidades específicas"
+    ],
+    "outcomes": [],
+    "demoUrl": "",
+    "repositoryUrl": ""
+  },
+  {
+    "id": "dashboard-power-bi",
+    "slug": "dashboard-power-bi",
+    "title": "Dashboard Power BI",
+    "shortDescription": "Visualización de indicadores para apoyar el análisis y la toma de decisiones.",
+    "description": "Visualización de indicadores para apoyar el análisis y la toma de decisiones. Contenido editable: amplía esta descripción en projects.json.",
+    "category": "Business Intelligence",
+    "technologies": ["Power BI", "SQL Server"],
+    "coverImage": "images/projects/dashboard-power-bi-cover.svg",
+    "coverImageAlt": "Imagen de referencia de un dashboard de indicadores en Power BI (captura pendiente)",
+    "gallery": [
+      {
+        "src": "images/projects/placeholder-screen.svg",
+        "alt": "Espacio reservado para una captura del dashboard en Power BI"
+      }
+    ],
+    "featured": true,
+    "displayOrder": 4,
+    "status": "to-define",
+    "role": "Pendiente de definir: describe tu participación en este proyecto.",
+    "problem": "Sin una visualización clara de los indicadores, el análisis de la información y la toma de decisiones se hacen más lentos.",
+    "solution": "Un dashboard que presenta los indicadores clave de forma visual para apoyar el análisis.",
+    "features": [
+      "Visualización de indicadores",
+      "Pendiente de definir: agrega aquí las funcionalidades específicas"
+    ],
+    "outcomes": [],
+    "demoUrl": "",
+    "repositoryUrl": ""
+  },
+  {
+    "id": "calculadora-de-fechas",
+    "slug": "calculadora-de-fechas",
+    "title": "Calculadora de fechas",
+    "shortDescription": "Herramienta para calcular diferencias y operaciones entre fechas.",
+    "description": "Herramienta para calcular diferencias y operaciones entre fechas. Contenido editable: amplía esta descripción en projects.json.",
+    "category": "Desarrollo web",
+    "technologies": ["Angular", "TypeScript"],
+    "coverImage": "images/projects/placeholder-screen.svg",
+    "coverImageAlt": "Imagen de referencia de la calculadora de fechas (captura pendiente)",
+    "gallery": [
+      {
+        "src": "images/projects/placeholder-screen.svg",
+        "alt": "Espacio reservado para una captura de la calculadora de fechas"
+      }
+    ],
+    "featured": false,
+    "displayOrder": 5,
+    "status": "to-define",
+    "role": "Pendiente de definir: describe tu participación en este proyecto.",
+    "problem": "Calcular manualmente diferencias entre fechas o sumar y restar días es lento y propenso a errores.",
+    "solution": "Una calculadora que resuelve estas operaciones con fechas de forma rápida y precisa.",
+    "features": [
+      "Cálculo de diferencia entre fechas",
+      "Pendiente de definir: agrega aquí las funcionalidades específicas"
+    ],
+    "outcomes": [],
+    "demoUrl": "",
+    "repositoryUrl": ""
+  }
+]

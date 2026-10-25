@@ -1,0 +1,80 @@
+// Tokens de diseño. Cambia aquí colores, tipografías, radios, sombras y espaciados.
+:root {
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: clamp(1.625rem, 1.3rem + 1.4vw, 2.25rem);
+  --text-3xl: clamp(2rem, 1.5rem + 2.2vw, 3rem);
+  --text-hero: clamp(2.5rem, 1.7rem + 3.8vw, 4.5rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6rem;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
+
+  --container-max: 1200px;
+  --container-pad: clamp(1rem, 4vw, 2rem);
+  --header-height: 76px;
+  --transition: 160ms ease;
+
+  // Modo claro
+  --color-bg: #f8f6f0;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1efe6;
+  --color-header-bg: rgb(248 246 240 / 92%);
+  --color-primary: #103d30;
+  --color-primary-strong: #09291f;
+  --color-on-primary: #ffffff;
+  --color-brand: #103d30;
+  --color-highlight: #2f7a5e;
+  --color-text: #17211d;
+  --color-text-muted: #626760;
+  --color-border: #e4e5dd;
+  --color-badge-bg: #eaf1ec;
+  --color-badge-text: #103d30;
+  --color-contact-bg: #103d30;
+  --color-on-contact: #f8f6f0;
+  --color-on-contact-muted: #cfdcd5;
+  --color-focus: #2f7a5e;
+  --shadow-sm: 0 1px 2px rgb(23 33 29 / 6%), 0 2px 8px rgb(23 33 29 / 5%);
+  --shadow-md: 0 8px 28px rgb(23 33 29 / 10%);
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #0f1714;
+  --color-surface: #17211d;
+  --color-surface-alt: #1d2924;
+  --color-header-bg: rgb(15 23 20 / 92%);
+  --color-primary: #2a7d60;
+  --color-primary-strong: #226a51;
+  --color-on-primary: #ffffff;
+  --color-brand: #8fd6b5;
+  --color-highlight: #6cc7a1;
+  --color-text: #eef1ec;
+  --color-text-muted: #a3aca5;
+  --color-border: #2a3731;
+  --color-badge-bg: #213a30;
+  --color-badge-text: #b8e6d1;
+  --color-contact-bg: #0b2a20;
+  --color-on-contact: #f1f5f1;
+  --color-on-contact-muted: #b7c7be;
+  --color-focus: #8fd6b5;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 30%);
+  --shadow-md: 0 8px 28px rgb(0 0 0 / 40%);
+}

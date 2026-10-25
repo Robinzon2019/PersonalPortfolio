@@ -1,0 +1,5 @@
+<ul class="grid">
+  @for (project of projects(); track project.id) {
+    <li><app-project-card [project]="project" /></li>
+  }
+</ul>
