@@ -63,30 +63,32 @@
     "repositoryUrl": ""
   },
   {
-    "id": "automatizacion-reportes",
-    "slug": "automatizacion-de-reportes",
-    "title": "Automatización de reportes",
-    "shortDescription": "Automatización del procesamiento de archivos y generación de reportes empresariales.",
-    "description": "Automatización del procesamiento de archivos y generación de reportes empresariales. Contenido editable: amplía esta descripción en projects.json.",
+    "id": "automatizacion-procesos",
+    "slug": "automatizacion-de-procesos",
+    "title": "Automatización de procesos",
+    "shortDescription": "Procesos ETL automatizados con Python, C# y Power Automate que transforman datos brutos en archivos Excel limpios y estandarizados.",
+    "description": "Procesos ETL automatizados con C# y Power Automate: a partir de fuentes de datos brutas se extraen, limpian y transforman los datos para generar documentos Excel estandarizados, listos para alimentar reportes de Power BI. Contenido editable: amplía esta descripción en projects.json.",
     "category": "Automatización",
-    "technologies": ["C#", ".NET", "Power Automate", "SharePoint"],
+    "technologies": ["C#", ".NET", "Power Automate", "SharePoint", "Excel"],
     "coverImage": "images/projects/automatizacion-reportes-cover.svg",
-    "coverImageAlt": "Imagen de referencia de un flujo de automatización de reportes (captura pendiente)",
+    "coverImageAlt": "Imagen de referencia de un flujo ETL automatizado que genera archivos estandarizados (captura pendiente)",
     "gallery": [
       {
         "src": "images/projects/placeholder-screen.svg",
-        "alt": "Espacio reservado para una captura de la automatización de reportes"
+        "alt": "Espacio reservado para una captura de la automatización de procesos"
       }
     ],
     "featured": true,
     "displayOrder": 3,
     "status": "to-define",
     "role": "Pendiente de definir: describe tu participación en este proyecto.",
-    "problem": "Procesar archivos y preparar reportes de forma manual consume tiempo y es propenso a errores.",
-    "solution": "Un proceso automatizado que procesa los archivos y genera los reportes empresariales.",
+    "problem": "Los datos llegaban en bruto, con formatos inconsistentes, y prepararlos de forma manual consumía tiempo y generaba errores.",
+    "solution": "Flujos ETL automatizados que extraen los datos brutos, los limpian y estandarizan, y generan documentos Excel uniformes listos para su análisis.",
     "features": [
-      "Procesamiento automático de archivos",
-      "Generación de reportes empresariales",
+      "Extracción de datos desde fuentes brutas",
+      "Procesos ETL con C# y Power Automate",
+      "Generación de documentos Excel limpios y estandarizados",
+      "Ejecución automática de los flujos",
       "Pendiente de definir: agrega aquí las funcionalidades específicas"
     ],
     "outcomes": [],
@@ -96,11 +98,11 @@
   {
     "id": "dashboard-power-bi",
     "slug": "dashboard-power-bi",
-    "title": "Dashboard Power BI",
-    "shortDescription": "Visualización de indicadores para apoyar el análisis y la toma de decisiones.",
-    "description": "Visualización de indicadores para apoyar el análisis y la toma de decisiones. Contenido editable: amplía esta descripción en projects.json.",
+    "title": "Reportes de inteligencia de negocios",
+    "shortDescription": "Reportes y dashboards en Power BI conectados a múltiples fuentes para apoyar el análisis y la toma de decisiones.",
+    "description": "Reportes y dashboards en Power BI que se conectan a distintas fuentes según el caso: archivos Excel, bases de datos SQL Server y listas de SharePoint. Contenido editable: amplía esta descripción en projects.json.",
     "category": "Business Intelligence",
-    "technologies": ["Power BI", "SQL Server"],
+    "technologies": ["Power BI", "Excel", "SQL Server", "SharePoint"],
     "coverImage": "images/projects/dashboard-power-bi-cover.svg",
     "coverImageAlt": "Imagen de referencia de un dashboard de indicadores en Power BI (captura pendiente)",
     "gallery": [
@@ -114,9 +116,11 @@
     "status": "to-define",
     "role": "Pendiente de definir: describe tu participación en este proyecto.",
     "problem": "Sin una visualización clara de los indicadores, el análisis de la información y la toma de decisiones se hacen más lentos.",
-    "solution": "Un dashboard que presenta los indicadores clave de forma visual para apoyar el análisis.",
+    "solution": "Reportes y dashboards que consolidan datos de distintas fuentes y presentan los indicadores clave de forma visual para apoyar el análisis.",
     "features": [
-      "Visualización de indicadores",
+      "Conexión a múltiples fuentes: Excel, SQL Server y listas de SharePoint",
+      "Transformación y modelado de datos en Power BI",
+      "Visualización de indicadores clave",
       "Pendiente de definir: agrega aquí las funcionalidades específicas"
     ],
     "outcomes": [],
