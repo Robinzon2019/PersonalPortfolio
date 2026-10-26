@@ -19,7 +19,7 @@ jobs:
               run: npm install
 
             - name: Build project
-              run: npm run build
+              run: npm run build -- --configuration production --base-href /portfolio/
 
             - name: Setup Github Pages
               uses: actions/configure-pages@v5
@@ -28,7 +28,7 @@ jobs:
               uses: actions/upload-artifact@v7
               with:
                 name: build-artifacts
-                path: dist
+                path: ./dist/portfolio/browser
     deploy:
         needs: build
         environment:
