@@ -17,13 +17,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
-        run: npm run build -- --configuration production --base-href /portfolio/
+        run: npm run build -- --configuration production --base-href /PersonalPortfolio/
+
+      - name: Add SPA fallback
+        run: cp dist/portfolio/browser/index.html dist/portfolio/browser/404.html
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
@@ -44,7 +47,7 @@ jobs:
     steps:
       - name: Deploy project to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
 
       - name: Show URL
         env:
